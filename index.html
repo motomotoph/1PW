@@ -7,21 +7,16 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="page">
-    <!-- Кнопка "Наверх" -->
     <a href="#top" class="back-to-top" id="backToTop">↑</a>
     
-    <!-- Главный якорь для верха страницы -->
     <div id="top"></div>
 
-    <!-- Шапка сайта -->
     <header class="header">
-        <div class="header__top">
-            <!-- Левая группа иконок -->
+        <div class="header__top container">
             <div class="header__icon-group header__icon-group--left">
                 <img src="assets/icons/Search.png" alt="Search" class="header__icon">
             </div>
             
-            <!-- Логотип с разделительной линией -->
             <div class="header__logo-container">
                 <div class="header__divider header__divider--left"></div>
                 <a href="#top" class="header__logo-link">
@@ -30,15 +25,13 @@
                 <div class="header__divider header__divider--right"></div>
             </div>
             
-            <!-- Правая группа иконок -->
             <div class="header__icon-group header__icon-group--right">
                 <img src="assets/icons/Shopping--cart.png" alt="Shopping Cart" class="header__icon">
                 <img src="assets/icons/User--avatar.png" alt="User Account" class="header__icon">
             </div>
         </div>
         
-        <!-- Основная навигация с якорными ссылками -->
-        <nav class="nav">
+        <nav class="nav container">
             <a href="#home" class="nav__link nav__link--active">Home</a>
             <a href="#features" class="nav__link">Features</a>
             <a href="#new-ceramics" class="nav__link">New Ceramics</a>
@@ -49,9 +42,7 @@
         </nav>
     </header>
 
-    <!-- Основное содержимое -->
     <main class="main">
-        <!-- Герой-секция -->
         <section class="hero anchor-link" id="home">
             <div class="container hero__container">
                 <div class="hero__content">
@@ -72,11 +63,10 @@
             </div>
         </section>
 
-        <!-- Особенности -->
         <section class="features anchor-link" id="features">
             <div class="container">
                 <h2 class="features__title">What makes our brand different</h2>
-                <div class="features__grid">
+                <div class="features__grid grid-layout">
                     <article class="feature-card">
                         <img src="assets/icons/Delivery.png" alt="Fast Delivery" class="feature-card__icon">
                         <h3 class="feature-card__title">Next day as standard</h3>
@@ -112,12 +102,11 @@
             </div>
         </section>
 
-        <!-- Новые товары -->
         <section class="products-section anchor-link" id="new-ceramics">
             <div class="container">
                 <h2 class="products-section__title">New ceramics</h2>
                 
-                <div class="products-grid">
+                <div class="products-grid grid-layout">
                     <article class="product-card">
                         <img src="assets/img/Photo.png" alt="The Dandy chair" class="product-card__image">
                         <h3 class="product-card__title">The Dandy chair</h3>
@@ -143,7 +132,6 @@
                     </article>
                 </div>
                 
-                <!-- Кнопка "View collection" внизу по центру -->
                 <div class="products-section__button-container">
                     <a href="#all-products" class="button button--outline products-section__button">
                         View all collection
@@ -152,12 +140,11 @@
             </div>
         </section>
 
-        <!-- Популярные товары -->
         <section class="products-section products-section--popular anchor-link" id="popular-products">
             <div class="container">
                 <h2 class="products-section__title">Our popular products</h2>
                 
-                <div class="products-grid products-grid--popular">
+                <div class="products-grid products-grid--popular grid-layout">
                     <article class="product-card product-card--wide">
                         <img src="assets/img/Large.png" alt="The Poplar suede sofa" class="product-card__image">
                         <h3 class="product-card__title">The Poplar suede sofa</h3>
@@ -177,7 +164,6 @@
                     </article>
                 </div>
                 
-                <!-- Кнопка "View collection" внизу по центру -->
                 <div class="products-section__button-container">
                     <a href="#all-popular" class="button button--outline products-section__button">
                         View all popular
@@ -186,7 +172,6 @@
             </div>
         </section>
 
-        <!-- Рассылка -->
         <section class="newsletter anchor-link" id="newsletter">
             <div class="container newsletter__container">
                 <h2 class="newsletter__title">
@@ -196,7 +181,6 @@
                     Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more
                 </p>
                 
-                <!-- Форма с кнопкой в одну линию -->
                 <form class="newsletter__form">
                     <div class="newsletter__form-group">
                         <input 
@@ -213,7 +197,6 @@
             </div>
         </section>
 
-        <!-- История компании -->
         <section class="story anchor-link" id="our-story">
             <div class="container story__container">
                 <div class="story__content">
@@ -237,25 +220,30 @@
             </div>
         </section>
         
-        <!-- Контактная информация -->
         <section class="contact anchor-link" id="contact">
             <div class="container">
                 <h2 class="contact__title">Contact Information</h2>
-                <div class="contact__info">
-                    <p><strong>Address:</strong> 123 Design Street, London, UK</p>
-                    <p><strong>Email:</strong> info@avion.com</p>
-                    <p><strong>Phone:</strong> +44 20 1234 5678</p>
-                    <p><strong>Hours:</strong> Mon-Fri 9am-6pm</p>
+                <div class="contact__info grid-layout">
+                    <div class="contact__item">
+                        <p><strong>Address:</strong> 123 Design Street, London, UK</p>
+                    </div>
+                    <div class="contact__item">
+                        <p><strong>Email:</strong> info@avion.com</p>
+                    </div>
+                    <div class="contact__item">
+                        <p><strong>Phone:</strong> +44 20 1234 5678</p>
+                    </div>
+                    <div class="contact__item">
+                        <p><strong>Hours:</strong> Mon-Fri 9am-6pm</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Подвал сайта -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__columns">
-                <!-- Меню -->
+            <div class="footer__columns grid-layout">
                 <div class="footer__column">
                     <h3 class="footer__column-title">Menu</h3>
                     <ul class="footer__menu">
@@ -267,7 +255,6 @@
                     </ul>
                 </div>
 
-                <!-- Категории -->
                 <div class="footer__column">
                     <h3 class="footer__column-title">Categories</h3>
                     <ul class="footer__menu">
@@ -279,7 +266,6 @@
                     </ul>
                 </div>
 
-                <!-- Компания -->
                 <div class="footer__column">
                     <h3 class="footer__column-title">Our company</h3>
                     <ul class="footer__menu">
@@ -291,10 +277,8 @@
                     </ul>
                 </div>
 
-                <!-- Подписка -->
                 <div class="footer__column footer__column--subscribe">
                     <h3 class="footer__column-title">Join our mailing list</h3>
-                    <!-- Форма с кнопкой в одну линию -->
                     <form class="footer__subscribe-form">
                         <div class="footer__form-group">
                             <input 
@@ -311,7 +295,6 @@
                 </div>
             </div>
 
-            <!-- Нижняя часть футера -->
             <div class="footer__bottom">
                 <p class="footer__copyright">Copyright 2022 Avion LTD</p>
                 <div class="footer__social">
@@ -329,7 +312,6 @@
         </div>
     </footer>
 
-    <!-- Скрытые якоря для ссылок -->
     <div id="all-products" class="hidden-anchor"></div>
     <div id="all-popular" class="hidden-anchor"></div>
     <div id="ceramics" class="hidden-anchor"></div>
@@ -340,99 +322,5 @@
     <div id="careers" class="hidden-anchor"></div>
     <div id="privacy" class="hidden-anchor"></div>
     <div id="returns" class="hidden-anchor"></div>
-
-    <script>
-        // Плавная прокрутка и активная навигация
-        document.addEventListener('DOMContentLoaded', function() {
-            // Плавная прокрутка для якорных ссылок
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Обновляем URL без перезагрузки страницы
-                        history.pushState(null, null, targetId);
-                        
-                        // Обновляем активную ссылку в навигации
-                        document.querySelectorAll('.nav__link').forEach(link => {
-                            link.classList.remove('nav__link--active');
-                        });
-                        this.classList.add('nav__link--active');
-                    }
-                });
-            });
-            
-            // Кнопка "Наверх"
-            const backToTop = document.getElementById('backToTop');
-            
-            window.addEventListener('scroll', function() {
-                // Показываем/скрываем кнопку "Наверх"
-                if (window.pageYOffset > 300) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-                
-                // Обновляем активную ссылку в навигации при скролле
-                updateActiveNavLink();
-            });
-            
-            // Функция для обновления активной ссылки в навигации
-            function updateActiveNavLink() {
-                const sections = document.querySelectorAll('.anchor-link');
-                const navLinks = document.querySelectorAll('.nav__link');
-                
-                let currentSection = '';
-                const scrollPosition = window.pageYOffset + 100;
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        currentSection = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('nav__link--active');
-                    if (link.getAttribute('href') === `#${currentSection}`) {
-                        link.classList.add('nav__link--active');
-                    }
-                });
-            }
-            
-            // Инициализация активной ссылки при загрузке
-            updateActiveNavLink();
-            
-            // Обработка отправки форм
-            const forms = document.querySelectorAll('form');
-            forms.forEach(form => {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    if (this.classList.contains('newsletter__form') || this.classList.contains('footer__subscribe-form')) {
-                        const emailInput = this.querySelector('input[type="email"]');
-                        if (emailInput && emailInput.value) {
-                            alert(`Thank you for subscribing with email: ${emailInput.value}`);
-                            emailInput.value = '';
-                        }
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

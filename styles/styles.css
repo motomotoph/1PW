@@ -1,4 +1,3 @@
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
 :root {
     --color-black: #000000;
     --color-white: #ffffff;
@@ -27,6 +26,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--color-text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -35,17 +35,49 @@
     padding: 0 var(--spacing-md);
 }
 
-/* ===== ПЛАВНАЯ ПРОКРУТКА ===== */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grid-layout {
+    display: grid;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 
-/* ===== ЯКОРНЫЕ ССЫЛКИ ===== */
+
 .anchor-link {
     scroll-margin-top: 120px;
 }
 
-/* ===== КОМПОНЕНТ КНОПКИ ===== */
+
 .button {
     display: inline-block;
     padding: 14px 32px;
@@ -82,7 +114,7 @@ html {
     color: var(--color-white);
 }
 
-/* ===== ШАПКА ===== */
+
 .header {
     position: sticky;
     top: 0;
@@ -99,7 +131,7 @@ html {
     position: relative;
 }
 
-/* Группы иконок */
+
 .header__icon-group {
     display: flex;
     align-items: center;
@@ -128,7 +160,7 @@ html {
     opacity: 0.7;
 }
 
-/* Контейнер логотипа с разделителями */
+
 .header__logo-container {
     display: flex;
     align-items: center;
@@ -162,7 +194,7 @@ html {
     height: 20px;
 }
 
-/* Навигация с якорными ссылками - БЕЗ ПОДЧЕРКИВАНИЯ */
+
 .nav {
     display: flex;
     justify-content: center;
@@ -189,14 +221,14 @@ html {
     background-color: var(--color-gray-light);
 }
 
-/* Активная ссылка без подчеркивания */
+
 .nav__link--active {
     color: var(--color-black);
     font-weight: 600;
     background-color: var(--color-gray-light);
 }
 
-/* ===== КНОПКА "НАВЕРХ" ===== */
+
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -229,7 +261,7 @@ html {
     transform: translateY(-3px);
 }
 
-/* ===== ГЕРОЙ-СЕКЦИЯ ===== */
+
 .hero {
     padding: var(--spacing-xxl) 0;
 }
@@ -286,7 +318,7 @@ html {
     display: block;
 }
 
-/* ===== ОСОБЕННОСТИ ===== */
+
 .features {
     padding: var(--spacing-xxl) 0;
     background-color: var(--color-gray-light);
@@ -336,7 +368,7 @@ html {
     line-height: 1.6;
 }
 
-/* ===== СЕКЦИЯ ТОВАРОВ ===== */
+
 .products-section {
     padding: var(--spacing-xxl) 0;
 }
@@ -348,7 +380,7 @@ html {
     text-align: center;
 }
 
-/* Сетка товаров */
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -356,7 +388,7 @@ html {
     margin-bottom: var(--spacing-xxl);
 }
 
-/* Карточка товара */
+
 .product-card {
     border: 1px solid var(--color-border);
     padding: var(--spacing-lg);
@@ -387,7 +419,7 @@ html {
     font-weight: 500;
 }
 
-/* Широкая карточка */
+
 .product-card--wide {
     grid-column: span 1;
 }
@@ -396,7 +428,7 @@ html {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* Контейнер для кнопки "View collection" */
+
 .products-section__button-container {
     display: flex;
     justify-content: center;
@@ -407,7 +439,7 @@ html {
     min-width: 200px;
 }
 
-/* ===== РАССЫЛКА ===== */
+
 .newsletter {
     padding: var(--spacing-xxl) 0;
     background-color: var(--color-gray-light);
@@ -432,7 +464,7 @@ html {
     margin-right: auto;
 }
 
-/* Форма рассылки (в одну линию) */
+
 .newsletter__form-group {
     display: flex;
     flex-direction: row;
@@ -460,7 +492,7 @@ html {
     min-width: 140px;
 }
 
-/* ===== ИСТОРИЯ КОМПАНИИ ===== */
+
 .story {
     padding: var(--spacing-xxl) 0;
 }
@@ -504,7 +536,7 @@ html {
     display: block;
 }
 
-/* ===== СЕКЦИЯ КОНТАКТОВ ===== */
+
 .contact {
     padding: var(--spacing-xxl) 0;
     background-color: var(--color-gray-light);
@@ -519,8 +551,10 @@ html {
 }
 
 .contact__info {
-    text-align: center;
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1200px;
     margin: 0 auto;
     background-color: var(--color-white);
     padding: var(--spacing-xl);
@@ -529,15 +563,15 @@ html {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.contact__info p {
-    font-size: 18px;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text);
-    line-height: 1.6;
+.contact__item {
+    text-align: center;
 }
 
-.contact__info p:last-child {
-    margin-bottom: 0;
+.contact__info p {
+    font-size: 18px;
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.6;
 }
 
 .contact__info strong {
@@ -545,7 +579,7 @@ html {
     font-weight: 600;
 }
 
-/* ===== ПОДВАЛ ===== */
+
 .footer {
     padding: var(--spacing-xxl) 0;
     background-color: var(--color-black);
@@ -587,7 +621,7 @@ html {
     text-decoration: underline;
 }
 
-/* Форма подписки в футере (в одну линию) */
+
 .footer__subscribe-form {
     margin-top: var(--spacing-md);
 }
@@ -622,7 +656,7 @@ html {
     min-width: 120px;
 }
 
-/* Нижняя часть футера */
+
 .footer__bottom {
     display: flex;
     flex-direction: row;
@@ -656,10 +690,250 @@ html {
     height: 24px;
 }
 
-/* ===== СКРЫТЫЕ ЯКОРИ ===== */
+
 .hidden-anchor {
     position: absolute;
     visibility: hidden;
     height: 0;
     width: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .hero__container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .hero__content {
+        order: 1;
+        width: 100%;
+    }
+    
+    .hero__image-wrapper {
+        order: 2;
+        width: 100%;
+    }
+    
+    .hero__title {
+        font-size: 36px;
+    }
+    
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid--popular {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-card--wide {
+        grid-column: span 2;
+    }
+    
+    .story__container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .story__content {
+        order: 1;
+        width: 100%;
+    }
+    
+    .story__image-wrapper {
+        order: 2;
+        width: 100%;
+    }
+    
+    .story__title {
+        font-size: 32px;
+    }
+    
+    .contact__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer__columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    .footer__column--subscribe {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header__top {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .header__icon-group {
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .header__logo-container {
+        order: -1;
+    }
+    
+    .header__divider {
+        display: none;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .nav__link {
+        font-size: 12px;
+        padding: var(--spacing-xs);
+    }
+    
+    .hero__title {
+        font-size: 28px;
+    }
+    
+    .features__title,
+    .products-section__title,
+    .newsletter__title,
+    .story__title,
+    .contact__title {
+        font-size: 32px;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .newsletter__form-group {
+        flex-direction: column;
+    }
+    
+    .newsletter__button {
+        width: 100%;
+    }
+    
+    .contact__info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero,
+    .features,
+    .products-section,
+    .newsletter,
+    .story,
+    .contact,
+    .footer {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero__title {
+        font-size: 24px;
+    }
+    
+    .hero__description,
+    .newsletter__description {
+        font-size: 16px;
+    }
+    
+    .features__grid,
+    .products-grid,
+    .products-grid--popular {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .product-card--wide {
+        grid-column: span 1;
+    }
+    
+    .features__title,
+    .products-section__title,
+    .newsletter__title,
+    .story__title,
+    .contact__title {
+        font-size: 28px;
+    }
+    
+    .footer__columns {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer__column--subscribe {
+        grid-column: span 1;
+    }
+    
+    .footer__form-group {
+        flex-direction: column;
+    }
+    
+    .footer__submit-button {
+        width: 100%;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero__title {
+        font-size: 20px;
+    }
+    
+    .features__title,
+    .products-section__title,
+    .newsletter__title,
+    .story__title,
+    .contact__title {
+        font-size: 24px;
+    }
+    
+    .button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .nav {
+        gap: var(--spacing-xs);
+    }
+    
+    .nav__link {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
 }
